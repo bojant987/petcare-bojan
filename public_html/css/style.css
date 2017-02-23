@@ -222,10 +222,6 @@ header .navbar-default .navbar-nav>li>a:hover, header .navbar-default .navbar-na
     color: #fff;
 }
 
-header .navbar-default .navbar-nav>li {
-    margin-right: 32px;
-}
-
 header .navbar-default .navbar-nav>li a {
     margin-left: 15px;
 }

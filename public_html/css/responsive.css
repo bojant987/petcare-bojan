@@ -37,14 +37,36 @@
         display: none;
     }
     /* ---- main navigation styles ---- */
-    header .navbar-default .appointment {
-        margin-left: 57.2px;
+    header .navbar-default {
+        height: 60px;
     }
     header .navbar-default .navbar-nav {
         padding: 0;
     }
     header .navbar-default .navbar-nav>li a {
         margin-left: 0;
+    }
+    header .navbar-default .navbar-collapse {
+        display: inline-block !important;
+        width: auto;
+    }
+    header .navbar-default .appointment {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 17.8px;
+    }
+    header .navbar-default .navbar-nav>li {
+        margin-right: 8px;
+    }
+    header .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #fff;
+    }
+    header .navbar-default .navbar-nav .open .dropdown-menu {
+        background-color: #1377c5;
+    }
+    header .dropdown-menu>li>a:hover, header .dropdown-menu>li>a:focus {
+        background-color: #0a68b1;
     }
 }
 
@@ -56,4 +78,10 @@
         width: auto;
     }
     /* ---- main navigation styles ---- */
+    header .navbar-default .appointment {
+        margin-left: 49.8px;
+    }
+    header .navbar-default .navbar-nav>li {
+        margin-right: 32px;
+    }
 }
