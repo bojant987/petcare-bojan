@@ -1,5 +1,8 @@
 @media (min-width: 768px) {
     /* ---- global styles ---- */
+    #myModal form .form-feedback {
+        height: 24px;
+    }
     /* ---- upper navigation styles ---- */
     header .upper-navigation {
         text-align: left;
