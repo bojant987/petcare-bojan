@@ -1,19 +1,59 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Dec 6, 2016, 1:44:10 PM
-    Author     : frontend
-*/
+@media (min-width: 768px) {
+    /* ---- global styles ---- */
+    /* ---- upper navigation styles ---- */
+    header .upper-navigation {
+        text-align: left;
+    }
+    header .upper-navigation p {
+        float: left;
+    }
+    header .upper-navigation .social {
+        float: right;
+    }
+    /* ---- mid navigation styles ---- */
+    header .mid-navigation .info {
+        display: none;
+        margin-top: 30px;
+        transform: translateX(-5%);
+    }
+    /* ---- main navigation styles ---- */
+    header .navbar-default .navbar-collapse {
+        width: 100vw;
+    }
+}
 
-@media (min-width: 768px){
-    
+@media (min-width: 992px) {
+    /* ---- global styles ---- */
+    /* ---- upper navigation styles ---- */
+    /* ---- mid navigation styles ---- */
+    header .mid-navigation .info {
+        display: inline-block;
+        transform: translateY(-24px);
+    }
+    header .mid-navigation .cart {
+        top: 24px;
+    }
+    header .mid-navigation .info-open {
+        display: none;
+    }
+    /* ---- main navigation styles ---- */
+    header .navbar-default .appointment {
+        margin-left: 57.2px;
+    }
+    header .navbar-default .navbar-nav {
+        padding: 0;
+    }
+    header .navbar-default .navbar-nav>li a {
+        margin-left: 0;
+    }
 }
-@media (min-width: 992px){
-    
-}
-@media (min-width: 1200px){
-    
+
+@media (min-width: 1200px) {
+    /* ---- global styles ---- */
+    /* ---- upper navigation styles ---- */
+    /* ---- mid navigation styles ---- */
+    header .mid-navigation .logo img {
+        width: auto;
+    }
+    /* ---- main navigation styles ---- */
 }

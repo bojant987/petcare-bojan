@@ -1,39 +1,282 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Dec 6, 2016, 1:44:01 PM
-    Author     : frontend
-*/
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800|Oxygen:300,400,700&subset=latin-ext');
+
+/* ---- global styles ---- */
 
 body {
     font-family: 'Oxygen', sans-serif;
     font-size: 14px;
 }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
-.info {
-    display: inline-block;
+
+
+/* ---- upper navigation styles ---- */
+
+header p {
+    margin: 0;
 }
-.info div {
+
+header .upper-navigation {
+    text-align: center;
+}
+
+header .upper-navigation .colors {
+    height: 4px;
+}
+
+header .upper-navigation .colors div {
+    float: left;
+    width: 33.3333%;
+    height: 4px;
+    background-color: #f44027;
+}
+
+header .upper-navigation .colors div:nth-of-type(2) {
+    background-color: #539e22;
+}
+
+header .upper-navigation .colors div:nth-of-type(3) {
+    background-color: #ffbe01;
+}
+
+header .upper-navigation p {
+    line-height: 40px;
+    margin: 0;
+    color: #777;
+}
+
+header .upper-navigation p a {
+    color: #777;
+}
+
+header .upper-navigation .social {
+    margin: 0;
+    height: 40px;
+}
+
+header .upper-navigation .social li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+header .upper-navigation .social li:first-of-type a {
+    background: url("assets/twitter.png") no-repeat center 0;
+}
+
+header .upper-navigation .social li:nth-of-type(2) a {
+    background: url("assets/facebook.png") no-repeat center 0;
+}
+
+header .upper-navigation .social li:nth-of-type(3) a {
+    background: url("assets/google.png") no-repeat center 0;
+}
+
+header .upper-navigation .social li:nth-of-type(4) a {
+    background: url("assets/dribbble.png") no-repeat center 0;
+}
+
+header .upper-navigation .social li:nth-of-type(5) a {
+    background: url("assets/linkedin.png") no-repeat center 0;
+}
+
+header .upper-navigation .social li:first-of-type a:hover {
+    background: url("assets/twitter.png") no-repeat center -40px #3B5998;
+}
+
+header .upper-navigation .social li:nth-of-type(2) a:hover {
+    background: url("assets/facebook.png") no-repeat center -40px #3B5998;
+}
+
+header .upper-navigation .social li:nth-of-type(3) a:hover {
+    background: url("assets/google.png") no-repeat center -40px #3B5998;
+}
+
+header .upper-navigation .social li:nth-of-type(4) a:hover {
+    background: url("assets/dribbble.png") no-repeat center -40px #3B5998;
+}
+
+header .upper-navigation .social li:nth-of-type(5) a:hover {
+    background: url("assets/linkedin.png") no-repeat center -40px #3B5998;
+}
+
+
+/* ---- mid navigation styles ---- */
+
+header .mid-navigation {
+    padding: 28px 0;
+}
+
+header .mid-navigation .logo img {
+    width: 180px;
+}
+
+header .mid-navigation .info-open {
+    background-color: transparent;
+    color: #1377c5;
+    border: none;
+    position: relative;
+    font-size: 22px;
+    top: 10px;
+    right: 14px;
+}
+
+header .mid-navigation .info {
+    display: none;
+    margin-top: 30px;
+    margin-left: 15%;
+}
+
+header .mid-navigation .info>div {
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 15px;
+}
+
+header .mid-navigation .info div span {
+    display: inline-block;
+    width: 25px;
+    height: 38px;
+    margin-right: 10px;
+}
+
+header .mid-navigation .info div .text {
     display: inline-block;
 }
 
-.navbar-default .navbar-nav li {
-    margin-right: 45.8px;
+header .mid-navigation .info div .text p:first-of-type {
+    font-weight: 600;
+    color: #313131;
+    margin-bottom: 6px;
 }
-.navbar-default .navbar-nav li:last-of-type {
-    margin-right: 0;
-    margin-left: 40px;
+
+header .mid-navigation .info div .text p:nth-of-type(2) {
+    color: #777;
 }
-header .navbar-collapse {
-    padding: 0;
+
+header .mid-navigation .info div:first-of-type span {
+    background: url("assets/info-icons.png") no-repeat 0 center;
 }
+
+header .mid-navigation .info div:nth-of-type(2) span {
+    background: url("assets/info-icons.png") no-repeat -271px center;
+}
+
+header .mid-navigation .info div:nth-of-type(3) span {
+    background: url("assets/info-icons.png") no-repeat -454px center;
+}
+
+header .mid-navigation .cart-menu {
+    display: inline-block;
+    float: right;
+}
+
+header .mid-navigation .cart {
+    position: relative;
+    top: 4px;
+}
+
+header .mid-navigation .cart span {
+    font-size: 12px;
+    color: #fff;
+    background-color: #f44027;
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    text-align: center;
+    line-height: 20px;
+    z-index: 1;
+}
+
+
+/* ---- main navigation styles ---- */
+
 header .navbar-default {
+    margin-bottom: 0;
+    min-height: 60px;
+    border-radius: 0;
+    border: none;
+    position: relative;
+}
+
+header .navbar-default .container {
+    position: relative;
+}
+
+header .navbar-nav>li>a {
+    padding: 20px 20px;
+}
+
+header .navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+header .navbar-default .navbar-nav>li>a:hover, header .navbar-default .navbar-nav>li>a:focus, header .navbar-default .navbar-nav>.active>a, header .navbar-default .navbar-nav>.active>a:hover, header .navbar-default .navbar-nav>.active>a:focus {
+    background-color: #0a68b1;
+    color: #fff;
+}
+
+header .navbar-default .navbar-nav>li {
+    margin-right: 32px;
+}
+
+header .navbar-default .navbar-nav>li a {
+    margin-left: 15px;
+}
+
+header .navbar-default .appointment {
+    color: #fff;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #0a68b1;
+    height: 62px;
+    line-height: 62px;
+    padding: 0 22px;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .navbar-default .appointment:hover, header .navbar-default .appointment:focus {
+    text-decoration: none;
+}
+
+header .navbar-default .navbar-collapse {
+    padding: 0;
+    border: none;
+}
+
+header .navbar-default .navbar-toggle {
+    border: none;
+    border-radius: 0;
+    margin-top: 13px;
+}
+
+header .navbar-default .navbar-toggle:hover, header .navbar-default .navbar-toggle:focus {
+    background-color: #0a68b1;
+}
+
+header .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+header .navbar-default .navbar-nav {
     background-color: #1377c5;
+    padding-top: 10px;
+}
+
+header .navbar-default .navbar-nav>.open>a, header .navbar-default .navbar-nav>.open>a:hover, header .navbar-default .navbar-nav>.open>a:focus {
+    background-color: #0a68b1;
+    color: #fff;
+}
+
+header .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #fff;
 }
