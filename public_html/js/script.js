@@ -168,4 +168,7 @@ $(document).ready(function() {
         "maxTime": '5:00pm',
         "showDuration": false
     });
+    
+    // why choose us fade in animation
+    
 });

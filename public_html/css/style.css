@@ -853,15 +853,15 @@ header .navbar-default .navbar-nav .open .dropdown-menu>li>a {
 }
 
 .why-choose-us .cover {
-    background-color: rgba(19, 119, 197, 0);
     padding: 50px 20px 43px 20px;
 }
 
 .why-choose-us article {
     border: 1px solid #d3d3d3;
     height: 290px;
-    background: url(assets/whychooseus-01.jpg);
     overflow: hidden;
+    position: relative;
+    transition: 1s;
 }
 
 .why-choose-us article .article-icon {
@@ -889,4 +889,57 @@ header .navbar-default .navbar-nav .open .dropdown-menu>li>a {
 .why-choose-us article h3 {
     margin-top: 0;
     font-size: 20px;
+    margin-bottom: 20px;
+}
+.why-choose-us article p {
+    height: 40px;
+    overflow: hidden;
+    color: #777;
+}
+.why-choose-us article a {
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    right: 20%;
+    color: #1377c5;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    background-color: #fff;
+}
+.why-choose-us article a:hover {
+    text-decoration: none;
+}
+.why-choose-us article:hover {
+    background: url(assets/whychooseus-01.jpg);
+    height: 350px;
+    top: -30px;
+}
+.why-choose-us article:hover h3, .why-choose-us article:hover p {
+    color: #fff;
+}
+
+.why-choose-us article:hover .cover {
+    background: rgba(19, 119, 197, 0.8);
+}
+.why-choose-us article:hover .article-icon-01 {
+    background: url(assets/whychooseus-icon-01.png) 0 -80px no-repeat;
+}
+
+.why-choose-us article:hover .article-icon-02 {
+    background: url(assets/whychooseus-icon-02.png) 0 -80px  no-repeat;
+}
+
+.why-choose-us article:hover .article-icon-03 {
+    background: url(assets/whychooseus-icon-03.png) 0 -80px  no-repeat;
+}
+
+.why-choose-us article:hover .article-icon-04 {
+    background: url(assets/whychooseus-icon-04.png) 0 -80px  no-repeat;
+}
+.why-choose-us .cover {
+    transition: 1s;
+}
+.why-choose-us article:hover .cover {
+    transform: scale(1.2);
 }

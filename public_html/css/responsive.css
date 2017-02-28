@@ -212,4 +212,7 @@
     }
     /* ---- visit store styles ---- */
     /* ---- why choose us styles ---- */
+    .why-choose-us article h3 {
+        font-size: 20px;
+    }
 }
