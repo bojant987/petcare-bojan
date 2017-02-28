@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800|Oxygen:300,400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Oxygen:300,400,700');
 
 /* ---- global styles ---- */
 
@@ -9,6 +9,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
+    margin: 10px 0 0 0;
 }
 
 #myModal .modal-dialog {
@@ -24,22 +25,22 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 32px 32px;
 }
 
-#myModal input, #myModal textarea {
+.get-appointment input, .get-appointment textarea {
     border-radius: 0;
 }
 
-#myModal input {
+.get-appointment input {
     height: 42px;
     line-height: 42px;
 }
 
-#myModal textarea {
+.get-appointment textarea {
     height: 162px;
     resize: none;
     margin-bottom: 30px;
 }
 
-#myModal .btn {
+.get-appointment .btn {
     border: none;
     width: 100%;
     height: 52px;
@@ -47,19 +48,92 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-#myModal form .errors {
+.get-appointment .errors {
     font-size: 12px;
     color: #f44027;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     height: 34px;
 }
 
-#myModal form .form-feedback {
+.get-appointment .form-feedback {
     margin-top: 25px;
     border: 2px solid #ffbe01;
     border-radius: 5px;
     height: 64px;
     visibility: hidden;
+}
+
+.get-appointment .pet, .get-appointment .service {
+    display: none;
+}
+
+.get-appointment .visible-select {
+    cursor: pointer;
+    position: relative;
+}
+
+.get-appointment .visible-select p {
+    width: 100%;
+    height: 42px;
+    line-height: 28px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background: url(assets/down-icon.png) no-repeat 90% center;
+    margin-bottom: 0;
+    color: #999;
+    background-color: #fff;
+}
+
+.get-appointment .datepicker, .get-appointment .timepicker {
+    background-color: #fff !important;
+}
+
+.get-appointment .visible-select ul {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 6px 0;
+    background-color: #5cb85c;
+    color: #000;
+}
+
+.get-appointment .visible-select ul li {
+    cursor: pointer;
+    padding: 0 12px;
+}
+
+.get-appointment .visible-select ul li:hover {
+    background-color: #0a68b1;
+    color: #fff;
+}
+
+.get-appointment input[name=date] {
+    background: url(assets/date-icon.png) no-repeat 90% center;
+}
+
+.get-appointment input[name=time] {
+    background: url(assets/time-icon.png) no-repeat 90% center;
+}
+
+.header-separator {
+    font-size: 20px;
+    color: #000;
+    background: url("assets/separator.png") no-repeat center 100%;
+    padding-bottom: 16px;
+    margin-bottom: 17px;
+}
+
+.sub-header {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 60px;
+}
+
+.focused {
+    border-color: #66afe9 !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
 
@@ -177,7 +251,6 @@ header .mid-navigation .info-open {
 header .mid-navigation .info {
     display: none;
     margin-top: 30px;
-    margin-left: 15%;
 }
 
 header .mid-navigation .info>div {
@@ -289,6 +362,7 @@ header .navbar-default .appointment {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 header .navbar-default .appointment:hover, header .navbar-default .appointment:focus {
@@ -326,4 +400,493 @@ header .navbar-default .navbar-nav>.open>a, header .navbar-default .navbar-nav>.
 
 header .navbar-default .navbar-nav .open .dropdown-menu>li>a {
     color: #fff;
+}
+
+
+/* ---- banner styles ---- */
+
+.banner {
+    position: relative;
+    z-index: 1;
+}
+
+.banner .cover {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.banner img {
+    width: 100vw;
+}
+
+.banner .bx-wrapper {
+    border: none;
+    box-shadow: none;
+}
+
+.banner .bxslider li .slider-content {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    top: 0;
+}
+
+.banner li .slider-content h1 {
+    color: #0a68b1;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.banner li .slider-content h4 {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 2px 2px 2px 2px #ccc;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.banner li .slider-content .btn {
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: bold;
+    height: 38px;
+    width: 120px;
+    line-height: 26px;
+    margin-right: 20px;
+    background-color: #f44027;
+    color: #fff;
+}
+
+.banner li .slider-content .buttons .btn:last-of-type {
+    margin-right: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.banner .bxslider li .slider-content-01 h1 span:first-of-type {
+    color: #f44027;
+}
+
+.banner .bxslider li .slider-content-01 h1 span:nth-of-type(2) {
+    color: #fff;
+}
+
+.banner .bxslider li .slider-content-01 h4 {
+    color: #000;
+    background: #fff;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.banner .bxslider li .slider-content-02 h1 span:nth-of-type(2) {
+    color: #f44027;
+}
+
+.banner .bxslider li .slider-content-03 h1 {
+    color: #f44027;
+}
+
+.banner .bxslider li .slider-content-02 {
+    margin-top: 34px;
+}
+
+.banner .bxslider li .slider-content p {
+    max-width: 494px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.banner li .slider-content-03 h4 {
+    max-width: 494px;
+    margin-top: 0;
+}
+
+
+/* ---- intro styles ---- */
+
+.intro {
+    padding: 60px 0;
+}
+
+.intro .container {
+    max-width: 370px;
+}
+
+.intro article {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 30px;
+}
+
+.intro article .content {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    z-index: 100;
+}
+
+.intro article::before {
+    background-color: #f44027;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    left: -20px;
+    position: absolute;
+    right: 0;
+    top: -104%;
+    transform: skewX(129deg);
+    transition: 2s;
+    z-index: 12;
+}
+
+.intro article::after {
+    background-color: rgba(244, 64, 39, 0.5);
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    left: -20px;
+    position: absolute;
+    right: -10px;
+    top: -104%;
+    transform: skewX(129deg);
+    transition: 2s;
+    z-index: 11;
+}
+
+.intro article .intro-img {
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+}
+
+.intro article .intro-icon {
+    position: absolute;
+    left: 15px;
+    top: 35%;
+    opacity: 0.5;
+    z-index: 12;
+    transition: 1s;
+}
+
+.intro article h2 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 14px;
+    margin-top: 0;
+    transition: 1s;
+}
+
+.intro article p {
+    color: #fff;
+    transition: 1s;
+}
+
+.intro article a {
+    display: block;
+    text-align: right;
+    color: #fff;
+    font-size: 12px;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(-50px);
+}
+
+.intro article p:first-of-type {
+    padding-bottom: 10px;
+}
+
+.intro article p:nth-of-type(2) {
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.intro article hr {
+    color: #fff;
+    opacity: 0;
+    transition: 2s;
+}
+
+.intro article:hover hr {
+    opacity: 0.4;
+}
+
+.intro article:hover::before {
+    background-color: #f44027;
+    transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    opacity: 0.9;
+}
+
+.intro article:hover::after {
+    opacity: 0;
+}
+
+.intro article:hover h2, .intro article:hover p:first-of-type {
+    transform: translateX(78px);
+}
+
+.intro article:hover .intro-icon {
+    top: 16px;
+    opacity: 1;
+}
+
+.intro article:hover a, .intro article:hover p:nth-of-type(2) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ---- schedule styles ---- */
+
+.schedule {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.schedule .cover {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 70px 0;
+}
+
+.schedule h3 {
+    color: #fff;
+}
+
+.schedule .header-separator {
+    background: url("assets/separator-white.png") no-repeat center 100%;
+}
+
+.schedule .get-appointment .form-feedback {
+    color: #fff;
+}
+
+
+/* ---- services styles ---- */
+
+.services {
+    padding: 100px 0;
+    position: relative;
+}
+
+.services .header-separator {
+    background: url("assets/separator.png") no-repeat -30px 100%;
+}
+
+.services .tabbed-services {
+    position: relative;
+    z-index: 1;
+}
+
+.services .nav-tabs li {
+    float: none;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #e3e9ec;
+}
+
+.services .nav-tabs li.active a {
+    border: none;
+    border-radius: 0;
+    background-color: #f44027;
+    color: #fff;
+    border-color: transparent;
+}
+
+.services .nav-tabs li:hover a {
+    background-color: #f44027;
+    color: #fff;
+    border-color: transparent;
+}
+
+.services .nav-tabs li a {
+    color: #000;
+    height: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding-right: 55px;
+    padding-left: 20px;
+}
+
+.services .nav-tabs li:last-of-type {
+    border-bottom: none;
+}
+
+.services .nav-tabs li a span {
+    line-height: 48px;
+    display: inline-block;
+}
+
+.services .nav-tabs li .tab-icon {
+    display: inline-block;
+    width: 27px;
+    height: 26px;
+    margin-right: 25px;
+    transform: translateY(7px);
+}
+
+.services .nav-tabs li:nth-of-type(1) .tab-icon {
+    background: url(assets/veterinary-icons.png) 0px 0px no-repeat;
+}
+
+.services .nav-tabs li:nth-of-type(2) .tab-icon {
+    background: url(assets/daycamp-icons.png) 0px 0px no-repeat;
+}
+
+.services .nav-tabs li:nth-of-type(3) .tab-icon {
+    background: url(assets/nutrition-icons.png) 0px 0px no-repeat;
+}
+
+.services .nav-tabs li:nth-of-type(4) .tab-icon {
+    background: url(assets/insurance-icons.png) 0px 0px no-repeat;
+}
+
+.services .nav-tabs li:nth-of-type(1):hover .tab-icon, .services .nav-tabs li:nth-of-type(1).active .tab-icon {
+    background: url(assets/veterinary-icons.png) 0px -29px no-repeat;
+}
+
+.services .nav-tabs li:nth-of-type(2):hover .tab-icon, .services .nav-tabs li:nth-of-type(2).active .tab-icon {
+    background: url(assets/daycamp-icons.png) 0px -29px no-repeat;
+}
+
+.services .nav-tabs li:nth-of-type(3):hover .tab-icon, .services .nav-tabs li:nth-of-type(3).active .tab-icon {
+    background: url(assets/nutrition-icons.png) 0px -29px no-repeat;
+}
+
+.services .nav-tabs li:nth-of-type(4):hover .tab-icon, .services .nav-tabs li:nth-of-type(4).active .tab-icon {
+    background: url(assets/insurance-icons.png) 0px -29px no-repeat;
+}
+
+.services .nav-tabs {
+    border: none;
+}
+
+.services figure {
+    /*max-width: 700px;*/
+    width: 38%;
+    overflow: visible;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+}
+
+.services figure img {
+    max-width: 100%;
+}
+
+.services .tab-pane {
+    border-left: 1px solid #f44027;
+    background-color: #f8f8f8;
+    padding: 50px 30px;
+    min-height: 284px;
+}
+
+
+/* ---- visit store styles ---- */
+
+.visit-store {
+    background-size: cover;
+    background-position: center center;
+    border-radius: no-repeat;
+    padding: 70px 0;
+}
+
+.visit-store .store-text {
+    margin-bottom: 30px;
+}
+
+.visit-store h1 {
+    font-weight: 600;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 18px;
+    margin-top: 0;
+}
+
+.visit-store h2 {
+    font-weight: 300;
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+}
+
+.visit-store a {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 36px;
+    border: 1px solid #fff;
+    transition: 0.8s;
+}
+
+.visit-store a:hover {
+    background-color: #fff;
+    color: #FFBE00;
+    text-decoration: none;
+}
+
+
+/* ---- why choose us styles ---- */
+
+.why-choose-us {
+    padding: 95px 0;
+}
+
+.why-choose-us .cover {
+    background-color: rgba(19, 119, 197, 0);
+    padding: 50px 20px 43px 20px;
+}
+
+.why-choose-us article {
+    border: 1px solid #d3d3d3;
+    height: 290px;
+    background: url(assets/whychooseus-01.jpg);
+    overflow: hidden;
+}
+
+.why-choose-us article .article-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 40px;
+}
+
+.why-choose-us article .article-icon-01 {
+    background: url(assets/whychooseus-icon-01.png) no-repeat;
+}
+
+.why-choose-us article .article-icon-02 {
+    background: url(assets/whychooseus-icon-02.png) no-repeat;
+}
+
+.why-choose-us article .article-icon-03 {
+    background: url(assets/whychooseus-icon-03.png) no-repeat;
+}
+
+.why-choose-us article .article-icon-04 {
+    background: url(assets/whychooseus-icon-04.png) no-repeat;
+}
+
+.why-choose-us article h3 {
+    margin-top: 0;
+    font-size: 20px;
 }
